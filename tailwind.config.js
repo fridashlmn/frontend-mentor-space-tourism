@@ -11,13 +11,84 @@ module.exports = {
   theme: {
     colors: {
       white: '#FFFFFF',
-    },
-    fontFamily: {
-      sans: ['Barlow', 'sans-serif'],
-      serif: ['Bellefair', 'serif'],
+      blue: {
+        300: '#D0D6F9',
+        900: '#0B0D17',
+      },
     },
     fontSize: {
-      base: ['1.125rem'],
+      // preset 7
+      'sm': [
+        '0.875rem',
+        {
+          lineHeight: '19.2%',
+          letterSpacing: '0.125rem',
+        },
+      ],
+      // preset 8
+      'base': [
+        '1rem',
+        {
+          lineHeight: '19.2%',
+          letterSpacing: '0.125rem',
+        },
+      ],
+      // preset 9
+      'lg': [
+        '1.125rem',
+        {
+          lineHeight: '180%',
+          letterSpacing: '0px',
+        },
+      ],
+      // preset 6
+      'xl': [
+        '1.75rem',
+        {
+          lineHeight: '32.1%',
+          letterSpacing: '0px',
+        },
+      ],
+      // preset 5
+      '2xl': [
+        '1.75rem',
+        {
+          lineHeight: '33.6%',
+          letterSpacing: '0.25',
+        },
+      ],
+      // preset 4
+      '3xl': [
+        '2rem',
+        {
+          lineHeight: '36.7%',
+          letterSpacing: '0px',
+        },
+      ],
+      // preset 3
+      '4xl': [
+        '3.5rem',
+        {
+          lineHeight: '64.2%',
+          letterSpacing: '0px',
+        },
+      ],
+      // preset 2
+      '5xl': [
+        '6.25rem',
+        {
+          lineHeight: '114.6%',
+          letterSpacing: '0px',
+        },
+      ],
+      // preset 1
+      '6xl': [
+        '9rem',
+        {
+          lineHeight: '171.9%',
+          letterSpacing: '0px',
+        },
+      ],
     },
   },
   plugins: [],

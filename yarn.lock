@@ -1305,7 +1305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.15.1, @nuxt/kit@npm:^3.10.3, @nuxt/kit@npm:^3.15.0, @nuxt/kit@npm:^3.15.1":
+"@nuxt/kit@npm:3.15.1, @nuxt/kit@npm:^3.10.3, @nuxt/kit@npm:^3.13.0, @nuxt/kit@npm:^3.15.0, @nuxt/kit@npm:^3.15.1":
   version: 3.15.1
   resolution: "@nuxt/kit@npm:3.15.1"
   dependencies:
@@ -2706,6 +2706,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bowser@npm:^2.11.0":
+  version: 2.11.0
+  resolution: "bowser@npm:2.11.0"
+  checksum: 10c0/04efeecc7927a9ec33c667fa0965dea19f4ac60b3fea60793c2e6cf06c1dcd2f7ae1dbc656f450c5f50783b1c75cf9dc173ba6f3b7db2feee01f8c4b793e1bd3
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -3121,6 +3128,13 @@ __metadata:
   version: 1.2.2
   resolution: "cookie-es@npm:1.2.2"
   checksum: 10c0/210eb67cd40a53986fda99d6f47118cfc45a69c4abc03490d15ab1b83ac978d5518356aecdd7a7a4969292445e3063c2302deda4c73706a67edc008127608638
+  languageName: node
+  linkType: hard
+
+"cookiejs@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "cookiejs@npm:2.1.3"
+  checksum: 10c0/735d20c49a02d9cd089dcd4384542ad12b6d02accb27772a229092dbfefa09e57c061e534819c81d924f4c56a7333c80755bfccfd5b528c083d1c0172a33d3c9
   languageName: node
   linkType: hard
 
@@ -6203,6 +6217,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nuxt-viewport@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "nuxt-viewport@npm:2.2.0"
+  dependencies:
+    "@nuxt/kit": "npm:^3.13.0"
+    bowser: "npm:^2.11.0"
+    cookiejs: "npm:^2.1.3"
+    vue-demi: "npm:^0.14.6"
+  checksum: 10c0/2870a0a9a2c6235193ad1b71901cab503495e6af960adbd77260c4738dff10de904bc90936b658dfdd51704462d8365dc7108c148967dce7e6438c023c3aa412
+  languageName: node
+  linkType: hard
+
 "nuxt@npm:^3.15.1":
   version: 3.15.1
   resolution: "nuxt@npm:3.15.1"
@@ -7590,9 +7616,11 @@ __metadata:
     "@nuxtjs/google-fonts": "npm:^3.2.0"
     eslint: "npm:^9.17.0"
     nuxt: "npm:^3.15.1"
+    nuxt-viewport: "npm:^2.2.0"
     prettier: "npm:3.4.2"
     tailwindcss: "npm:^3.4.17"
     typescript: "npm:^5.7.2"
+    vite-svg-loader: "npm:^5.1.0"
     vue: "npm:latest"
     vue-router: "npm:latest"
   languageName: unknown
@@ -8153,7 +8181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.3.2":
+"svgo@npm:^3.0.2, svgo@npm:^3.3.2":
   version: 3.3.2
   resolution: "svgo@npm:3.3.2"
   dependencies:
@@ -8919,6 +8947,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vite-svg-loader@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "vite-svg-loader@npm:5.1.0"
+  dependencies:
+    svgo: "npm:^3.0.2"
+  peerDependencies:
+    vue: ">=3.2.13"
+  checksum: 10c0/39f218db6384aec56ec6fb9517723eaee49701225688e1d5f5132f0730605a9e59201464911b19cbfdc647caebacf4c8737dffe2472cd815ebb6645c2292993c
+  languageName: node
+  linkType: hard
+
 "vite@npm:^5.0.0":
   version: 5.4.11
   resolution: "vite@npm:5.4.11"
@@ -9080,6 +9119,22 @@ __metadata:
   dependencies:
     ufo: "npm:^1.5.4"
   checksum: 10c0/c5c241a2395ee34d8105fb6010027165f54f79f7cffebb73cb9da35b9ec006d910457b3e32026688f7f6a718e660040abffc43cd559d1e31cfea22b32fa0ba7f
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:^0.14.6":
+  version: 0.14.10
+  resolution: "vue-demi@npm:0.14.10"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 10c0/a9ed8712fa36d01bc13c39757f95f30cebf42d557b99e94bff86d8660c81f2911b41220f7affc023d1ffcc19e13999e4a83019991e264787cca2c616e83aea48
   languageName: node
   linkType: hard
 

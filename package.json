@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "nuxt": "^3.15.1",
+    "nuxt-viewport": "^2.2.0",
     "tailwindcss": "^3.4.17",
+    "vite-svg-loader": "^5.1.0",
     "vue": "latest",
     "vue-router": "latest"
   },
