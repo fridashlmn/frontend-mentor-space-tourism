@@ -31,9 +31,9 @@ const backgroundImage = computed(() => {
   overflow: hidden;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .myElement::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 265%;
     height: 265%;
@@ -45,23 +45,23 @@ const backgroundImage = computed(() => {
   }
 }
 
-@media screen and (min-width:321px) and (max-width: 424px) {
+@media screen and (min-width: 321px) and (max-width: 424px) {
   .myElement::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 300%;
     height: 300%;
     top: -100%;
-    left: 0%;
+    left: 0;
     z-index: -1;
     background-size: contain;
     transform: rotate(90deg);
   }
 }
 
-@media screen and (min-width:425px) and (max-width: 572px) {
+@media screen and (min-width: 425px) and (max-width: 572px) {
   .myElement::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 240%;
     height: 240%;
@@ -73,9 +73,9 @@ const backgroundImage = computed(() => {
   }
 }
 
-@media screen and (min-width:573px) and (max-width: 641px) {
+@media screen and (min-width: 573px) and (max-width: 641px) {
   .myElement::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 190%;
     height: 190%;
@@ -87,9 +87,9 @@ const backgroundImage = computed(() => {
   }
 }
 
-@media screen and (min-width:641px) and (max-width: 768px) {
+@media screen and (min-width: 641px) and (max-width: 768px) {
   .myElement::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 180%;
     height: 180%;

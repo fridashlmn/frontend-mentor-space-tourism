@@ -10,59 +10,35 @@
       <hr
         v-if="viewport.isGreaterThan('desktop')"
         class="absolute z-10 -left-[51%] w-[55%] border border-white border-opacity-10"
-      />
+      >
       <StyledLink
-        :css-class="activeRoute('index')"
-        label-prefix="00"
-        label="Home"
-        link="/"
-      />
-      <StyledLink
-        :css-class="activeRoute('destination')"
-        label-prefix="01"
-        label="Destination"
-        link="/destination"
-      />
-      <StyledLink
-        :css-class="activeRoute('crew')"
-        label-prefix="02"
-        label="Crew"
-        link="/crew"
-      />
-      <StyledLink
-        :css-class="activeRoute('technology')"
-        label-prefix="03"
-        label="Technology"
-        link="/technology"
+        v-for="item in navigationItems"
+        :key="item.link"
+        :link="item.link"
+        :label="item.label"
+        :label-prefix="item.labelPrefix"
+        :css-class="item.cssClass"
       />
     </div>
     <div v-else>
-      <MenuIcon v-if="!showMobileMenu" class="relative z-10 my-2" @click="toggleMobileMenu" />
+      <MenuIcon
+        v-if="!showMobileMenu"
+        class="relative z-10 my-2"
+        @click="toggleMobileMenu"
+      />
       <CloseIcon v-else class="relative z-10 my-2" @click="toggleMobileMenu" />
-      <div v-if="showMobileMenu" class="z-0 absolute flex flex-col h-screen w-64 right-0 top-0 px-8 py-28 bg-blue-900 bg-opacity-25 backdrop-blur-lg">
+      <div
+        v-if="showMobileMenu"
+        class="z-0 absolute flex flex-col h-screen w-64 right-0 top-0 px-8 py-28 bg-blue-900 bg-opacity-25 backdrop-blur-lg"
+      >
         <StyledLink
-            :css-class="activeRoute('index')"
-            label-prefix="00"
-            label="Home"
-            link="/"
-        />
-        <StyledLink
-            :css-class="activeRoute('destination')"
-            label-prefix="01"
-            label="Destination"
-            link="/destination"
-        />
-        <StyledLink
-            :css-class="activeRoute('crew')"
-            label-prefix="02"
-            label="Crew"
-            link="/crew"
-        />
-        <StyledLink
-            :css-class="activeRoute('technology')"
-            label-prefix="03"
-            label="Technology"
-            link="/technology"
+          v-for="item in navigationItems"
+          :key="item.link"
+          :link="item.link"
+          :label="item.label"
+          :label-prefix="item.labelPrefix"
+          :css-class="item.cssClass"
+          @click="toggleMobileMenu"
         />
       </div>
     </div>
@@ -75,17 +51,43 @@ import CloseIcon from '~/assets/images/shared/icon-close.svg?component'
 
 const viewport = useViewport()
 const router = useRouter()
-const showMobileMenu= ref<boolean>(false)
+const showMobileMenu = ref<boolean>(false)
+
+const navigationItems = computed(() => [
+  {
+    link: '/',
+    label: 'Home',
+    labelPrefix: '00',
+    cssClass: activeRoute('index'),
+  },
+  {
+    link: '/destination',
+    label: 'Destination',
+    labelPrefix: '01',
+    cssClass: activeRoute('destination'),
+  },
+  {
+    link: '/crew',
+    label: 'Crew',
+    labelPrefix: '02',
+    cssClass: activeRoute('crew'),
+  },
+  {
+    link: '/technology',
+    label: 'Technology',
+    labelPrefix: '03',
+    cssClass: activeRoute('technology'),
+  },
+])
 
 function activeRoute(value: string): string {
   if (value === router.currentRoute.value.name) {
-    return 'absolute z-10 -bottom-[69%] w-full border border-white border-opacity-100'
+    return 'absolute z-10 md:top-[164%] md:right-0 md:w-full border border-white border-opacity-100 md:rotate-0 rotate-90 -right-[44%] top-[45%] w-[18px]'
   }
   return ''
 }
 
-function toggleMobileMenu(){
+function toggleMobileMenu() {
   showMobileMenu.value = !showMobileMenu.value
 }
-
 </script>
