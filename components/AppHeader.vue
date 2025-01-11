@@ -2,7 +2,9 @@
   <div
     class="font-['Barlow_Condensed'] lg:py-10 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
   >
-    <LogoIcon class="lg:ml-16" />
+    <NuxtLink to="/">
+      <LogoIcon class="lg:ml-16" />
+    </NuxtLink>
     <div
       v-if="viewport.isGreaterThan('mobileWide')"
       class="lg:pl-40 pl-12 lg:pr-12 z-20 flex items-center h-24 bg-white bg-opacity-5 backdrop-blur-lg"
