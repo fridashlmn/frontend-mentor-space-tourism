@@ -8,8 +8,10 @@ html {
   font-family: 'Barlow', serif;
 }
 
-h1 {
+h1,
+button {
   font-family: 'Bellefair', serif;
+  font-weight: 400;
 }
 
 h4 {

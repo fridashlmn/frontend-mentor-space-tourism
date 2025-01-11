@@ -94,7 +94,7 @@ const backgroundImage = computed(() => {
     width: 180%;
     height: 180%;
     top: -47%;
-    left: -66%;
+    left: -80%;
     z-index: -1;
     background-size: contain;
     transform: rotate(90deg);
