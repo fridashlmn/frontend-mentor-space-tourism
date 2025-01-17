@@ -29,7 +29,7 @@ module.exports = {
       'base': [
         '1rem',
         {
-          lineHeight: '19.2%',
+          lineHeight: '180%',
           letterSpacing: '0.125rem',
         },
       ],

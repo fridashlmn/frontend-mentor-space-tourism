@@ -1,6 +1,6 @@
 <template>
   <div
-    class="font-['Barlow_Condensed'] lg:py-10 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
+    class="font-['Barlow_Condensed'] lg:py-10 md:pt-0 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
   >
     <NuxtLink to="/">
       <LogoIcon class="lg:ml-16" />
@@ -12,7 +12,7 @@
       <hr
         v-if="viewport.isGreaterThan('desktop')"
         class="absolute z-10 -left-[51%] w-[55%] border border-white border-opacity-10"
-      >
+      />
       <StyledLink
         v-for="item in navigationItems"
         :key="item.link"
