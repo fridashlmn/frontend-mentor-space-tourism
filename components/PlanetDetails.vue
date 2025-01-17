@@ -38,7 +38,6 @@
 
 <script setup lang="ts">
 interface Props {
-  imgSrc: string
   name: string
   description: string
   distance: string

@@ -10,7 +10,7 @@
       <template #image="slotProps">
         <img
           :src="useAsset(slotProps.activeHashTab)"
-          alt="moon"
+          alt="planet"
           class="lg:h-[30rem] lg:w-[30rem] md:h-[18.75rem] md:w-[18.75rem] h-[9.375rem] w-[9.375rem] m-6"
         />
       </template>
@@ -21,7 +21,6 @@
             :name="destinations[0].name"
             :description="destinations[0].description"
             :travel="destinations[0].travel"
-            img-src=""
           />
         </TabContent>
         <TabContent :name="destinations[1].name">
@@ -30,7 +29,6 @@
             :name="destinations[1].name"
             :description="destinations[1].description"
             :travel="destinations[1].travel"
-            img-src=""
           />
         </TabContent>
         <TabContent :name="destinations[2].name">
@@ -39,7 +37,6 @@
             :name="destinations[2].name"
             :description="destinations[2].description"
             :travel="destinations[2].travel"
-            img-src=""
           />
         </TabContent>
         <TabContent :name="destinations[3].name">
@@ -48,7 +45,6 @@
             :name="destinations[3].name"
             :description="destinations[3].description"
             :travel="destinations[3].travel"
-            img-src=""
           />
         </TabContent>
       </template>
