@@ -1,20 +1,22 @@
 <template>
-  <div class="flex lg:flex-row flex-col items-center xl:pt-24 lg:pt-16 my-0 mx-auto md:max-w-[32.125rem]"
+  <div
+    class="flex lg:flex-row flex-col items-center justify-between lg:pt-16 my-0 mx-auto lg:w-full lg:max-w-none md:max-w-[32.125rem]"
   >
-    <slot v-if="viewport.isLessOrEquals('tablet')" name="image" />
-    <ul :class="cssClasses" class="font-['Barlow_Condensed']">
-      <li
-        v-for="tab in tabs"
-        :key="tab.name"
-        :class="cssListClasses"
-        class="cursor-pointer"
-        @click="activeTabHash = tab.hash"
-      >
-        {{ tab.name }}
-      </li>
-    </ul>
-    <slot v-if="viewport.isGreaterThan('tablet')" name="image" />
-    <slot name="content" />
+    <slot name="image" :active-hash-tab="activeTabHash" />
+    <div class="flex flex-col lg:items-baseline items-center">
+      <ul :class="cssClasses" class="font-['Barlow_Condensed']">
+        <li
+          v-for="tab in tabs"
+          :key="tab.name"
+          :class="cssListClasses"
+          class="cursor-pointer"
+          @click="activeTabHash = tab.hash"
+        >
+          {{ tab.name }}
+        </li>
+      </ul>
+      <slot name="content" />
+    </div>
   </div>
 </template>
 
@@ -26,8 +28,6 @@ const tabs = ref([])
 const props = defineProps<{
   variant: 'name' | 'dot'
 }>()
-
-const viewport = useViewport()
 
 const cssClasses: ComputedRef<string> = computed(() => {
   if (props.variant === 'name') {

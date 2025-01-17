@@ -47,9 +47,9 @@
   </div>
 </template>
 <script setup lang="ts">
-import LogoIcon from '~/assets/images/shared/logo.svg?component'
-import MenuIcon from '~/assets/images/shared/icon-hamburger.svg?component'
-import CloseIcon from '~/assets/images/shared/icon-close.svg?component'
+import LogoIcon from '~/assets/images/logo.svg?component'
+import MenuIcon from '~/assets/images/icon-hamburger.svg?component'
+import CloseIcon from '~/assets/images/icon-close.svg?component'
 
 const viewport = useViewport()
 const router = useRouter()

@@ -1,7 +1,7 @@
 <template>
   <div
     id="myElement"
-    class="myElement max-w-screen min-h-screen h-screen w-screen md:bg-cover"
+    class="myElement max-w-screen min-h-screen w-screen md:bg-cover"
     :class="`${backgroundImage}`"
   >
     <AppHeader />
@@ -14,15 +14,15 @@ const route = useRoute()
 
 const backgroundImage = computed(() => {
   if (route.name === 'destination') {
-    return 'before:bg-[url(~/assets/images/destination/background-destination-desktop.jpg)] lg:bg-[url(~/assets/images/destination/background-destination-desktop.jpg)]'
+    return 'before:bg-[url(~/assets/images/background-destination-desktop.jpg)] lg:bg-[url(~/assets/images/background-destination-desktop.jpg)]'
   }
   if (route.name === 'crew') {
-    return 'before:bg-[url(~/assets/images/crew/background-crew-desktop.jpg)] lg:bg-[url(~/assets/images/crew/background-crew-desktop.jpg)]'
+    return 'before:bg-[url(~/assets/images/background-crew-desktop.jpg)] lg:bg-[url(~/assets/images/background-crew-desktop.jpg)]'
   }
   if (route.name === 'technology') {
-    return 'before:bg-[url(~/assets/images/technology/background-technology-desktop.jpg)] lg:bg-[url(~/assets/images/technology/background-technology-desktop.jpg)]'
+    return 'before:bg-[url(~/assets/images/background-technology-desktop.jpg)] lg:bg-[url(~/assets/images/background-technology-desktop.jpg)]'
   }
-  return 'before:bg-[url(~/assets/images/home/background-home-desktop.jpg)] md:bg-[url(~/assets/images/home/background-home-desktop.jpg)]'
+  return 'before:bg-[url(~/assets/images/background-home-desktop.jpg)] md:bg-[url(~/assets/images/background-home-desktop.jpg)]'
 })
 </script>
 <style>
