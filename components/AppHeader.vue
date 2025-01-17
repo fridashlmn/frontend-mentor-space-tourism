@@ -1,6 +1,6 @@
 <template>
   <div
-    class="font-['Barlow_Condensed'] lg:py-10 md:pt-0 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
+    class="font-['Barlow_Condensed'] lg:py-10 md:pt-0 md:pr-0 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
   >
     <NuxtLink to="/">
       <LogoIcon class="lg:ml-16" />

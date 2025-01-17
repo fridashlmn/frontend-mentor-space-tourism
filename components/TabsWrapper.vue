@@ -1,5 +1,5 @@
 <template>
-  <div class="flex lg:flex-row flex-col items-center xl:pt-24 lg:pt-16 my-0 mx-auto"
+  <div class="flex lg:flex-row flex-col items-center xl:pt-24 lg:pt-16 my-0 mx-auto md:max-w-[32.125rem]"
   >
     <slot v-if="viewport.isLessOrEquals('tablet')" name="image" />
     <ul :class="cssClasses" class="font-['Barlow_Condensed']">
@@ -31,7 +31,7 @@ const viewport = useViewport()
 
 const cssClasses: ComputedRef<string> = computed(() => {
   if (props.variant === 'name') {
-    return 'flex flex-row justify-between w-full text-base uppercase'
+    return 'flex flex-row justify-between max-w-[18.75rem] w-full md:pt-8 text-base uppercase'
   }
   return ''
 })
