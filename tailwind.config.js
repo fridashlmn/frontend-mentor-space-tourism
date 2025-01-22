@@ -69,7 +69,7 @@ module.exports = {
       '4xl': [
         '3.5rem',
         {
-          lineHeight: '64.2%',
+          lineHeight: '100%',
           letterSpacing: '0px',
         },
       ],

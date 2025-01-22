@@ -41,7 +41,6 @@ const backgroundImage = computed(() => {
     left: -105%;
     z-index: -1;
     background-size: contain;
-    transform: rotate(90deg);
   }
 }
 
@@ -49,13 +48,12 @@ const backgroundImage = computed(() => {
   .myElement::before {
     content: '';
     position: absolute;
-    width: 300%;
-    height: 300%;
-    top: -100%;
+    width: 400%;
+    height: 400%;
+    top: -107%;
     left: 0;
     z-index: -1;
     background-size: contain;
-    transform: rotate(90deg);
   }
 }
 
@@ -69,7 +67,6 @@ const backgroundImage = computed(() => {
     left: 25%;
     z-index: -1;
     background-size: contain;
-    transform: rotate(90deg);
   }
 }
 
@@ -83,7 +80,6 @@ const backgroundImage = computed(() => {
     left: -135%;
     z-index: -1;
     background-size: contain;
-    transform: rotate(90deg);
   }
 }
 
@@ -91,13 +87,12 @@ const backgroundImage = computed(() => {
   .myElement::before {
     content: '';
     position: absolute;
-    width: 180%;
-    height: 180%;
-    top: -47%;
+    width: 300%;
+    height: 300%;
+    top: -11%;
     left: -80%;
     z-index: -1;
     background-size: contain;
-    transform: rotate(90deg);
   }
 }
 </style>

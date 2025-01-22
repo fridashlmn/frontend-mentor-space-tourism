@@ -8,29 +8,32 @@
     <div :class="cssInnerClass">
       <ul
         v-if="variant === 'name'"
-        :class="cssListClass"
-        class="font-['Barlow_Condensed']"
+        class="font-['Barlow_Condensed'] flex flex-row justify-between max-w-[18.75rem] w-full md:pt-8 text-base uppercase"
       >
         <li
           v-for="tab in tabs"
           :key="tab.name"
-          :class="cssListItemClass"
-          class="cursor-pointer"
+          class="hover:underline underline-offset-8 cursor-pointer"
           @click="activeTabHash = tab.hash"
         >
           {{ tab.name }}
         </li>
       </ul>
       <slot name="content" />
-      <ul v-if="variant === 'dot'" class="font-['Barlow_Condensed']">
+      <ul
+        v-if="variant === 'dot'"
+        class="font-['Barlow_Condensed'] flex flex-row items-center lg:mt-24 mt-16"
+      >
         <li
           v-for="tab in tabs"
           :key="tab.name"
-          :class="cssListItemClass"
-          class="cursor-pointer"
+          class="lg:mr-10 mr-6 cursor-pointer"
           @click="activeTabHash = tab.hash"
         >
-          _
+          <span
+            :class="activeTabHash === tab.hash ? 'opacity-100' : 'opacity-15'"
+            class="inline-block lg:h-4 lg:w-4 h-3 w-3 bg-white hover:opacity-50 rounded-[50%]"
+          />
         </li>
       </ul>
     </div>
@@ -56,7 +59,7 @@ const cssOuterClass: ComputedRef<string> = computed(() => {
     return 'flex lg:flex-row flex-col items-center justify-between lg:pt-16 my-0 mx-auto lg:w-full lg:max-w-none md:max-w-[32.125rem]'
   }
   if (props.variant === 'dot') {
-    return 'flex lg:flex-row flex-col items-center justify-between lg:pt-16 my-0 mx-auto lg:w-full lg:max-w-none md:max-w-[32.125rem]'
+    return 'flex lg:flex-row flex-col items-start justify-between my-0 mx-auto lg:w-full lg:max-w-none md:max-w-[32.125rem]'
   }
   return ''
 })
@@ -66,21 +69,7 @@ const cssInnerClass: ComputedRef<string> = computed(() => {
     return 'flex flex-col lg:items-baseline items-center'
   }
   if (props.variant === 'dot') {
-    return 'flex flex-col lg:items-baseline items-center'
-  }
-  return ''
-})
-
-const cssListClass: ComputedRef<string> = computed(() => {
-  if (props.variant === 'name') {
-    return 'flex flex-row justify-between max-w-[18.75rem] w-full md:pt-8 text-base uppercase'
-  }
-  return ''
-})
-
-const cssListItemClass: ComputedRef<string> = computed(() => {
-  if (props.variant === 'name') {
-    return 'hover:underline underline-offset-8'
+    return 'flex flex-col lg:items-baseline self-center items-center'
   }
   return ''
 })
