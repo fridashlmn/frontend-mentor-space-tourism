@@ -1,7 +1,7 @@
 <template>
   <div class="lg:max-w-[27.813rem]">
     <h3
-      class="font-['Bellefair'] lg:text-5xl text-4xl md:pt-10 pt-7 pb-5 uppercase lg:text-left text-center"
+      class="font-['Bellefair'] lg:text-5xl md:text-[5rem] text-4xl md:pt-10 pt-7 pb-5 uppercase lg:text-left text-center"
     >
       {{ name }}
     </h3>
@@ -16,9 +16,9 @@
     <div
       class="flex md:flex-row flex-col md:items-baseline items-center lg:justify-start justify-center lg:text-left text-center"
     >
-      <div class="md:mr-24 pb-10">
+      <div class="md:mr-24 pb-6">
         <p
-          class="font-['Barlow_Condensed'] text-sm uppercase md:pb-10 pb-8 text-blue-300"
+          class="font-['Barlow_Condensed'] text-sm uppercase pb-3 text-blue-300"
         >
           avg. distance
         </p>
@@ -26,7 +26,7 @@
       </div>
       <div>
         <p
-          class="font-['Barlow_Condensed'] text-sm uppercase md:pb-10 pb-8 text-blue-300"
+          class="font-['Barlow_Condensed'] text-sm uppercase pb-3 text-blue-300"
         >
           est. travel time
         </p>

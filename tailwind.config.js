@@ -21,7 +21,7 @@ module.exports = {
       'sm': [
         '0.875rem',
         {
-          lineHeight: '100%',
+          lineHeight: '180%',
           letterSpacing: '0.125rem',
         },
       ],

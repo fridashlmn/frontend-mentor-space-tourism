@@ -1,20 +1,12 @@
 <template>
-  <div
-    class="flex flex-col md:items-baseline items-center text-white xl:px-40 lg:px-12 px-6 pb-12"
-  >
-    <div
-      class="lg:py-6 pb-16 uppercase lg:text-2xl md:text-[1.25rem] text-base"
-    >
-      <span class="opacity-25 mr-6">02</span>
-      <span>meet your crew</span>
-    </div>
+  <SubSiteContainer title="meet your crew" number="02">
     <TabsWrapper variant="dot">
       <template #image="slotProps">
-        <div class="imageContainer lg:mt-0 mt-6">
+        <div class="imageOverlay my-0 mx-auto">
           <img
             :src="useAsset(slotProps.activeHashTab)"
             alt="crew member"
-            class="lg:max-h-[65vh] max-h-[21.25vh]"
+            class="lg:max-h-[42.5rem] md:max-h-[35rem] max-h-[21.25rem]"
           />
         </div>
       </template>
@@ -49,7 +41,7 @@
         </TabContent>
       </template>
     </TabsWrapper>
-  </div>
+  </SubSiteContainer>
 </template>
 <script setup lang="ts">
 import TabContent from '~/components/TabContent.vue'
@@ -61,12 +53,12 @@ const useAsset = (path: string): string => {
 }
 </script>
 <style scoped>
-.imageContainer {
+.imageOverlay {
   overflow: hidden;
   position: relative;
   z-index: 2;
 }
-.imageContainer:before {
+.imageOverlay:before {
   content: '';
   position: absolute;
   right: 0;

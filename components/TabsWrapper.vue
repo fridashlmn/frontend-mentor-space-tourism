@@ -8,11 +8,14 @@
     <div :class="cssInnerClass">
       <ul
         v-if="variant === 'name'"
-        class="font-['Barlow_Condensed'] flex flex-row justify-between max-w-[18.75rem] w-full md:pt-8 text-base uppercase"
+        class="font-['Barlow_Condensed'] flex flex-row justify-between md:max-w-[18.75rem] w-full md:px-4 px-10 text-base uppercase"
       >
         <li
           v-for="tab in tabs"
           :key="tab.name"
+          :class="
+            activeTabHash === tab.hash ? 'underline underline-offset-8' : ''
+          "
           class="hover:underline underline-offset-8 cursor-pointer"
           @click="activeTabHash = tab.hash"
         >
@@ -90,7 +93,7 @@ const cssInnerClass: ComputedRef<string> = computed(() => {
     return 'flex flex-col lg:items-baseline items-center'
   }
   if (props.variant === 'dot') {
-    return 'flex flex-col lg:items-baseline self-center items-center'
+    return 'flex flex-col lg:items-baseline self-center items-center lg:m-0 mb-4'
   }
   if (props.variant === 'number') {
     return 'md:p-0 px-6 flex lg:flex-row flex-col lg:order-first items-center'

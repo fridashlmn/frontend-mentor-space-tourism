@@ -1,12 +1,12 @@
 <template>
   <div class="lg:max-w-[33.688rem]">
     <h4
-      class="font-['Bellefair'] md:text-3xl text-lg md:pt-10 pb-4 uppercase lg:text-left text-center opacity-50"
+      class="font-['Bellefair'] md:text-3xl text-lg lg:p-0 md:pt-10 pb-4 uppercase lg:text-left text-center opacity-50"
     >
       {{ role }}
     </h4>
     <h3
-      class="font-['Bellefair'] md:text-4xl text-xl md:pt-8 pb-8 uppercase lg:text-left text-center"
+      class="font-['Bellefair'] md:text-4xl text-xl lg:pt-4 lg:pb-6 md:pt-8 pb-8 uppercase lg:text-left text-center"
     >
       {{ name }}
     </h3>

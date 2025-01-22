@@ -1,19 +1,11 @@
 <template>
-  <div
-    class="flex flex-col md:items-baseline items-center text-white xl:pl-40 xl:pr-0 lg:pr-0 lg:pl-12 md:px-10 pb-12"
-  >
-    <div
-      class="lg:py-6 pb-16 uppercase lg:text-2xl md:text-[1.25rem] text-base"
-    >
-      <span class="opacity-25 mr-6">03</span>
-      <span>space launch 101</span>
-    </div>
+  <SubSiteContainer title="space launch 101" number="03" class="xl:pr-0 lg:pr-0 p-0">
     <TabsWrapper variant="number">
       <template #image="slotProps">
         <img
           :src="useAsset(slotProps.activeHashTab)"
           alt="crew member"
-          class="lg:max-w-[37.5rem] w-screen max-w-none lg:ml-8"
+          class="lg:max-w-[37.5rem] w-screen max-w-none lg:ml-8 lg:mt-0 md:mt-20"
         />
       </template>
       <template #content>
@@ -37,7 +29,7 @@
         </TabContent>
       </template>
     </TabsWrapper>
-  </div>
+  </SubSiteContainer>
 </template>
 <script setup lang="ts">
 import TabContent from '~/components/TabContent.vue'

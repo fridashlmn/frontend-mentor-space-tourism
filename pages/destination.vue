@@ -1,17 +1,11 @@
 <template>
-  <div
-    class="flex flex-col md:items-baseline items-center text-white xl:px-40 lg:px-12 px-6 pb-12"
-  >
-    <div class="py-6 uppercase lg:text-2xl md:text-[1.25rem] text-base">
-      <span class="opacity-25 mr-6">01</span>
-      <span>pick your destination</span>
-    </div>
+  <SubSiteContainer title="pick your destination" number="01">
     <TabsWrapper variant="name">
       <template #image="slotProps">
         <img
           :src="useAsset(slotProps.activeHashTab)"
           alt="planet"
-          class="lg:h-[30rem] lg:w-[30rem] md:h-[18.75rem] md:w-[18.75rem] h-[9.375rem] w-[9.375rem] m-6"
+          class="lg:h-[30rem] lg:w-[30rem] md:h-[18.75rem] md:w-[18.75rem] h-[9.375rem] w-[9.375rem] md:m-16 m-8"
         />
       </template>
       <template #content>
@@ -49,7 +43,7 @@
         </TabContent>
       </template>
     </TabsWrapper>
-  </div>
+  </SubSiteContainer>
 </template>
 <script setup lang="ts">
 import { destinations } from '~/content/data.json'

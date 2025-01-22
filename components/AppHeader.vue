@@ -1,13 +1,13 @@
 <template>
   <div
-    class="font-['Barlow_Condensed'] lg:py-10 md:pt-0 md:pr-0 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
+    class="font-['Barlow_Condensed'] lg:py-10 md:pl-10 md:py-0 md:pr-0 p-6 relative flex flex-row justify-between items-center text-white text-base uppercase"
   >
     <NuxtLink to="/">
       <LogoIcon class="lg:ml-16" />
     </NuxtLink>
     <div
       v-if="viewport.isGreaterThan('mobileWide')"
-      class="lg:pl-40 pl-12 lg:pr-12 z-20 flex items-center h-24 bg-white bg-opacity-5 backdrop-blur-lg"
+      class="lg:pr-12 md:pl-40 pl-12 z-20 flex items-center h-24 bg-white bg-opacity-5 backdrop-blur-lg"
     >
       <hr
         v-if="viewport.isGreaterThan('desktop')"
@@ -28,10 +28,10 @@
         class="relative z-10 my-2"
         @click="toggleMobileMenu"
       />
-      <CloseIcon v-else class="relative z-10 my-2" @click="toggleMobileMenu" />
+      <CloseIcon v-else class="relative z-20 my-2" @click="toggleMobileMenu" />
       <div
         v-if="showMobileMenu"
-        class="z-0 absolute flex flex-col h-screen w-64 right-0 top-0 px-8 py-28 bg-blue-900 bg-opacity-25 backdrop-blur-lg"
+        class="z-10 absolute flex flex-col h-screen w-64 right-0 top-0 px-8 py-28 bg-blue-900 bg-opacity-25 backdrop-blur-lg"
       >
         <StyledLink
           v-for="item in navigationItems"
