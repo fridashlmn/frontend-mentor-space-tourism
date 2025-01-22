@@ -64,7 +64,7 @@ const backgroundImage = computed(() => {
     width: 240%;
     height: 240%;
     top: -77%;
-    left: 25%;
+    left: -10%;
     z-index: -1;
     background-size: contain;
   }

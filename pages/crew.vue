@@ -1,8 +1,10 @@
 <template>
   <div
-    class="flex flex-col md:items-baseline items-center text-white xl:px-40 lg:px-12 px-10 pb-12"
+    class="flex flex-col md:items-baseline items-center text-white xl:px-40 lg:px-12 px-6 pb-12"
   >
-    <div class="lg:py-6 pb-16 uppercase lg:text-2xl text-[1.25rem]">
+    <div
+      class="lg:py-6 pb-16 uppercase lg:text-2xl md:text-[1.25rem] text-base"
+    >
       <span class="opacity-25 mr-6">02</span>
       <span>meet your crew</span>
     </div>
@@ -12,7 +14,7 @@
           <img
             :src="useAsset(slotProps.activeHashTab)"
             alt="crew member"
-            class="lg:max-h-[65vh] max-h-[21.25]"
+            class="lg:max-h-[65vh] max-h-[21.25vh]"
           />
         </div>
       </template>

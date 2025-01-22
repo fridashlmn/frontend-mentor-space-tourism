@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col md:items-baseline items-center text-white xl:px-40 lg:px-12 px-10 pb-12"
+    class="flex flex-col md:items-baseline items-center text-white xl:px-40 lg:px-12 px-6 pb-12"
   >
-    <div class="py-6 uppercase lg:text-2xl text-[1.25rem]">
+    <div class="py-6 uppercase lg:text-2xl md:text-[1.25rem] text-base">
       <span class="opacity-25 mr-6">01</span>
       <span>pick your destination</span>
     </div>

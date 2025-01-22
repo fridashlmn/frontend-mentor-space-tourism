@@ -21,7 +21,7 @@ module.exports = {
       'sm': [
         '0.875rem',
         {
-          lineHeight: '19.2%',
+          lineHeight: '100%',
           letterSpacing: '0.125rem',
         },
       ],
@@ -45,7 +45,7 @@ module.exports = {
       'xl': [
         '1.75rem',
         {
-          lineHeight: '32.1%',
+          lineHeight: '100%',
           letterSpacing: '0px',
         },
       ],
@@ -53,7 +53,7 @@ module.exports = {
       '2xl': [
         '1.75rem',
         {
-          lineHeight: '33.6%',
+          lineHeight: '100%',
           letterSpacing: '0.25',
         },
       ],
@@ -61,7 +61,7 @@ module.exports = {
       '3xl': [
         '2rem',
         {
-          lineHeight: '36.7%',
+          lineHeight: '100%',
           letterSpacing: '0px',
         },
       ],

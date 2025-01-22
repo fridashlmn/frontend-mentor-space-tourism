@@ -1,7 +1,7 @@
 <template>
   <div :class="cssOuterClass">
     <slot
-      v-if="variant === 'name'"
+      v-if="variant === 'name' || variant === 'number'"
       name="image"
       :active-hash-tab="activeTabHash"
     />
@@ -17,6 +17,24 @@
           @click="activeTabHash = tab.hash"
         >
           {{ tab.name }}
+        </li>
+      </ul>
+      <ul
+        v-if="variant === 'number'"
+        class="lg:my-0 my-8 font-['Barlow_Condensed'] flex lg:flex-col flex-row justify-between text-base uppercase"
+      >
+        <li
+          v-for="(tab, index) in tabs"
+          :key="tab.name"
+          :class="
+            activeTabHash === tab.hash
+              ? 'bg-white text-blue-900'
+              : 'bg-transparent'
+          "
+          class="lg:my-4 lg:ml-0 lg:mr-16 mx-3 flex items-center justify-center lg:h-20 lg:w-20 md:h-14 md:w-14 h-10 w-10 border border-white border-opacity-25 rounded-full lg:text-3xl md:text-[1.5rem] text-lg aspect-square cursor-pointer hover:bg-white hover:text-blue-900"
+          @click="activeTabHash = tab.hash"
+        >
+          {{ index + 1 }}
         </li>
       </ul>
       <slot name="content" />
@@ -51,7 +69,7 @@ const activeTabHash = ref<string>('')
 const tabs = ref([])
 
 const props = defineProps<{
-  variant: 'name' | 'dot'
+  variant: 'name' | 'dot' | 'number'
 }>()
 
 const cssOuterClass: ComputedRef<string> = computed(() => {
@@ -60,6 +78,9 @@ const cssOuterClass: ComputedRef<string> = computed(() => {
   }
   if (props.variant === 'dot') {
     return 'flex lg:flex-row flex-col items-start justify-between my-0 mx-auto lg:w-full lg:max-w-none md:max-w-[32.125rem]'
+  }
+  if (props.variant === 'number') {
+    return 'flex lg:flex-row order flex-col items-center justify-between lg:pt-16 my-0 mx-auto lg:w-full lg:max-w-none md:max-w-[32.125rem]'
   }
   return ''
 })
@@ -70,6 +91,9 @@ const cssInnerClass: ComputedRef<string> = computed(() => {
   }
   if (props.variant === 'dot') {
     return 'flex flex-col lg:items-baseline self-center items-center'
+  }
+  if (props.variant === 'number') {
+    return 'md:p-0 px-6 flex lg:flex-row flex-col lg:order-first items-center'
   }
   return ''
 })
